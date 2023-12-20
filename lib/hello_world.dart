@@ -10,13 +10,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       debugShowCheckedModeBanner: false,
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: const Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Text('App Title'),
+              Text('My App'),
               Text(
                 'Home',
                 style: TextStyle(fontSize: 16),
