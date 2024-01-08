@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
+// void main() {
+//   runApp(const MyApp());
+// }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -27,17 +27,32 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Center(
-            child: Container(
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(
-              color: Colors.red,
-              borderRadius: BorderRadius.all(Radius.circular(12))),
-          child: Text(
-            'Hello World',
-            style: TextStyle(fontSize: 40),
-          ),
-        )),
+        body: Row(
+          children: [
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              decoration: BoxDecoration(
+                color: Colors.red,
+              ),
+              child: Text(
+                'Hello World',
+                style: TextStyle(fontSize: 40),
+              ),
+              height: 300,
+            ),
+            Container(
+              padding: EdgeInsets.only(top: 20),
+              decoration: BoxDecoration(
+                color: Colors.green,
+              ),
+              child: Text(
+                'Hello World',
+                style: TextStyle(fontSize: 20),
+              ),
+              height: 300,
+            ),
+          ],
+        ),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.blue,
           items: const [
