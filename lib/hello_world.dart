@@ -1,3 +1,4 @@
+import 'package:first_app/flutter_layout_demo.dart';
 import 'package:flutter/material.dart';
 
 // void main() {
@@ -27,29 +28,53 @@ class MyApp extends StatelessWidget {
           ),
           backgroundColor: Colors.blue,
         ),
-        body: Row(
+        body: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Container(
-              padding: EdgeInsets.only(top: 20),
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-              child: Text(
+              margin: const EdgeInsets.only(top: 10),
+              decoration: const BoxDecoration(),
+              child: const Text(
                 'Hello World',
-                style: TextStyle(fontSize: 40),
+                style: TextStyle(
+                    fontSize: 35,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.blue),
+                textAlign: TextAlign.center,
               ),
-              height: 300,
             ),
-            Container(
-              padding: EdgeInsets.only(top: 20),
-              decoration: BoxDecoration(
-                color: Colors.green,
-              ),
-              child: Text(
-                'Hello World',
-                style: TextStyle(fontSize: 20),
-              ),
-              height: 300,
+            Expanded(
+              child: GridView.builder(
+                  gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2,
+                    crossAxisSpacing: 4.0,
+                    mainAxisSpacing: 4.0,
+                  ),
+                  itemCount: 4,
+                  itemBuilder: (BuildContext context, int index) {
+                    return Container(
+                        decoration: BoxDecoration(
+                      color: Colors.grey[200],
+                      borderRadius: BorderRadius.circular(6.0),
+                    ));
+                  }),
+            ),
+            Builder(builder: (context) {
+              return ElevatedButton(
+                  onPressed: () {
+                    print('button pressed');
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const OtherPage()));
+                  },
+                  child: const Text(
+                    'next page',
+                    style: TextStyle(color: Colors.red),
+                  ));
+            }),
+            const SizedBox(
+              height: 80,
             ),
           ],
         ),

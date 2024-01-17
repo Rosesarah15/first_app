@@ -1,6 +1,10 @@
 # first_app
+first_app is a personal project I'm developing as a beginner to learn the ropes of app development using Flutter. This app is my hands-on playground, where I experiment, make mistakes, and ultimately grow as a developer.
 
-A new Flutter project.
+## Table of Contents
+
+
+<!-- A new Flutter project.
 
 ## Getting Started
 
@@ -13,4 +17,4 @@ A few resources to get you started if this is your first Flutter project:
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+samples, guidance on mobile development, and a full API reference. -->
